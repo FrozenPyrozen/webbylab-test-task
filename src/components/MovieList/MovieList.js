@@ -1,7 +1,7 @@
 import React from "react";
 import Movie from "../Movie";
 
-const MovieList = ({ movies = [], deleteMovie, fetchDetails }) => (
+const MovieList = ({ movies = [], deleteMovie, fetchDetails, sortByName }) => (
   <div
     style={{
       display: "flex",
@@ -13,6 +13,7 @@ const MovieList = ({ movies = [], deleteMovie, fetchDetails }) => (
       marginTop: 32
     }}
   >
+    <button onClick={sortByName}>Sort By Name </button>
     {movies.map(movie => (
       <Movie
         key={movie.id}

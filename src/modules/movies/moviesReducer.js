@@ -12,6 +12,15 @@ function moviesReducer(state = [], { type, payload }) {
     case types.DELETE_SUCCESS:
       return state.filter(item => item.id !== payload);
 
+    case types.SORT_FILMS_BY_NAME:
+      return state.slice().sort((prev, next) => {
+        const prevTitle = prev.title.toLowerCase();
+        const nextTitle = next.title.toLowerCase();
+        if (prevTitle < nextTitle) return -1;
+        if (prevTitle > nextTitle) return 1;
+        return 0;
+      });
+
     default:
       return state;
   }

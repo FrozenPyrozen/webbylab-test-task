@@ -34,7 +34,12 @@ const fetchMoreMovieSuccess = item => ({
   payload: item
 });
 
+const sortFilmsByName = () => ({
+  type: types.SORT_FILMS_BY_NAME
+});
+
 export default {
+  sortFilmsByName,
   fetchMoreMovieSuccess,
   addMovieSuccess,
   deleteMovieSuccess,

@@ -7,7 +7,10 @@ const FETCH_REQUEST = "[movies] FETCH_REQUEST";
 const FETCH_SUCCESS = "[movies] FETCH_SUCCESS";
 const FETCH_ERROR = "[movies] FETCH_ERROR";
 
+const SORT_FILMS_BY_NAME = "[movies] SORT_FILMS_BY_NAME";
+
 export default {
+  SORT_FILMS_BY_NAME,
   FETCH_MOVIE_SUCCESS,
   ADD_SUCCESS,
   DELETE_SUCCESS,
