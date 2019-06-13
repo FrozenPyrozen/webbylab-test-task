@@ -1,8 +1,9 @@
 import React from "react";
 import MovieFilter from "../MovieFilter";
 import SearchSelect from "../SearchSelect";
+import AddMovieModal from "../AddMovieModal";
 
-const AppHeader = () => (
+const AppHeader = ({ onClose, onOpenModal, isOpened }) => (
   <header
     style={{
       display: "flex",
@@ -15,6 +16,8 @@ const AppHeader = () => (
         "0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12)"
     }}
   >
+    {isOpened && <AddMovieModal onClose={onClose} />}
+    <button onClick={onOpenModal}>Add movie</button>
     <SearchSelect />
     <MovieFilter />
   </header>

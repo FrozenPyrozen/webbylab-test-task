@@ -5,9 +5,9 @@ const changeFilter = filter => ({
   payload: filter
 });
 
-const changeSearchType = value => ({
+const changeSearchType = event => ({
   type: types.CHANGE_SEARCH_TYPE,
-  payload: value
+  payload: event.target.value
 });
 
 const fetchRequest = () => ({

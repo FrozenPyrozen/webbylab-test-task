@@ -10,9 +10,6 @@ const getFilteredMovies = state => {
   const filter = getFilter(state).toLowerCase();
   const searchType = getTypeOfSearch(state);
 
-  const stars = items.map(item => item.Stars);
-  console.log(searchType);
-  // console.log(stars.filter(star => star.toLowerCase().includes(filter)));
   if (searchType === "actorName") {
     return items.filter(item => item.Stars.toLowerCase().includes(filter));
   }

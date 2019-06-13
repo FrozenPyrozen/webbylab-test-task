@@ -13,12 +13,13 @@ const fetchMovies = () => async dispatch => {
   }
 };
 
-const addMovie = text => async dispatch => {
+const addMovie = movie => async dispatch => {
   dispatch(actions.fetchRequest());
 
   try {
-    const response = await api.addMovie({ text });
-    dispatch(actions.addMovieSuccess(response.data));
+    const response = await api.addMovie(movie);
+
+    dispatch(actions.addMovieSuccess(response));
   } catch (error) {
     dispatch(actions.fetchError(error));
   }

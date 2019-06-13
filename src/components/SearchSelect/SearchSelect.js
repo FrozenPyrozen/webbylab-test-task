@@ -6,7 +6,8 @@ const SearchSelect = ({ filterValues, currentFilter, changeFilter }) => (
   <select
     className={styles.filter}
     value={currentFilter}
-    onChange={e => changeFilter(e.target.value)}
+    onChange={changeFilter}
+    name="type"
   >
     {filterValues.map(filterValue => (
       <option key={filterValue} value={filterValue}>
