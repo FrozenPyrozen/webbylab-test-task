@@ -5,6 +5,11 @@ const changeFilter = filter => ({
   payload: filter
 });
 
+const changeSearchType = value => ({
+  type: types.CHANGE_SEARCH_TYPE,
+  payload: value
+});
+
 const fetchRequest = () => ({
   type: types.FETCH_REQUEST
 });
@@ -39,6 +44,7 @@ const sortFilmsByName = () => ({
 });
 
 export default {
+  changeSearchType,
   sortFilmsByName,
   fetchMoreMovieSuccess,
   addMovieSuccess,

@@ -1,6 +1,7 @@
 const ADD_SUCCESS = "[movies] ADD_SUCCESS";
 const DELETE_SUCCESS = "[movies] DELETE_SUCCESS";
 const CHANGE_FILTER = "[movies] CHANGE_FILTER";
+const CHANGE_SEARCH_TYPE = "[movies] CHANGE_SEARCH_TYPE";
 const FETCH_MOVIE_SUCCESS = "[movies] FETCH_MOVIE_SUCCESS";
 
 const FETCH_REQUEST = "[movies] FETCH_REQUEST";
@@ -10,6 +11,7 @@ const FETCH_ERROR = "[movies] FETCH_ERROR";
 const SORT_FILMS_BY_NAME = "[movies] SORT_FILMS_BY_NAME";
 
 export default {
+  CHANGE_SEARCH_TYPE,
   SORT_FILMS_BY_NAME,
   FETCH_MOVIE_SUCCESS,
   ADD_SUCCESS,

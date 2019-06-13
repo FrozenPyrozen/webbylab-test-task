@@ -13,15 +13,6 @@ class MovieListContainer extends Component {
     this.props.fetchMovies();
   }
 
-  // sortMoviesByNames = () =>
-  //   this.props.movies.slice().sort((prev, next) => {
-  //     const prevTitle = prev.title.toLowerCase();
-  //     const nextTitle = next.title.toLowerCase();
-  //     if (prevTitle < nextTitle) return -1;
-  //     if (prevTitle > nextTitle) return 1;
-  //     return 0;
-  //   });
-
   render() {
     return <MovieList {...this.props} />;
   }

@@ -46,6 +46,16 @@ function filterReducer(state = "", { type, payload }) {
   }
 }
 
+function searchTypeReducer(state = "title", { type, payload }) {
+  switch (type) {
+    case types.CHANGE_SEARCH_TYPE:
+      return payload;
+
+    default:
+      return state;
+  }
+}
+
 function loadingReducer(state = false, { type, payload }) {
   switch (type) {
     case types.FETCH_REQUEST:
@@ -78,5 +88,6 @@ export default combineReducers({
   loading: loadingReducer,
   error: errorReducer,
   filter: filterReducer,
-  currentMovie: itemReducer
+  currentMovie: itemReducer,
+  currentSearchType: searchTypeReducer
 });
