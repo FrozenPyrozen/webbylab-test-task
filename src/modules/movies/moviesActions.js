@@ -29,9 +29,9 @@ const fetchError = error => ({
   payload: error
 });
 
-const fetchMoreMovieSuccess = id => ({
+const fetchMoreMovieSuccess = item => ({
   type: types.FETCH_MOVIE_SUCCESS,
-  payload: id
+  payload: item
 });
 
 export default {

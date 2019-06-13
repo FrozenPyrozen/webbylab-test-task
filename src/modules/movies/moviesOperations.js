@@ -39,8 +39,9 @@ const fetchMoreMovieDetails = id => async dispatch => {
   dispatch(actions.fetchRequest());
 
   try {
-    await api.getMovieById(id);
-    dispatch(actions.fetchMoreMovieSuccess(id));
+    const res = await api.getMovieById(id);
+
+    dispatch(actions.fetchMoreMovieSuccess(res));
   } catch (error) {
     dispatch(actions.fetchError(error));
   }

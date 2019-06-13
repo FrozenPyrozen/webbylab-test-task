@@ -1,6 +1,6 @@
 import React from "react";
 
-import ShowMoreModal from "../ShowMoreModal/";
+import ShowMoreModal from "../ShowMoreModal";
 
 const Movie = ({
   title,
@@ -8,7 +8,7 @@ const Movie = ({
   onOpenModal,
   isOpened,
   onClose,
-  onShowDetails
+  fetchDetails
 }) => (
   <div
     style={{
@@ -24,10 +24,8 @@ const Movie = ({
     }}
   >
     <p>{title}</p>
+    {isOpened && <ShowMoreModal onClose={onClose} details={fetchDetails} />}
 
-    {isOpened && (
-      <ShowMoreModal onClose={onClose} onShowDetails={onShowDetails} />
-    )}
     <hr />
     <footer
       style={{
@@ -37,7 +35,14 @@ const Movie = ({
       }}
     >
       <button onClick={onDelete}>Delete</button>
-      <button onClick={onOpenModal}>Show more</button>
+      <button
+        onClick={() => {
+          fetchDetails();
+          return onOpenModal();
+        }}
+      >
+        Show more
+      </button>
     </footer>
   </div>
 );

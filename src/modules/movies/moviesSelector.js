@@ -2,6 +2,8 @@ const getItems = state => state.movies.items;
 
 const getFilter = state => state.movies.filter;
 
+const getItem = state => state.movies.currentMovie;
+
 const getFilteredMovies = state => {
   const items = getItems(state);
   const filter = getFilter(state).toLowerCase();
@@ -9,4 +11,4 @@ const getFilteredMovies = state => {
   return items.filter(item => item.title.toLowerCase().includes(filter));
 };
 
-export default { getItems, getFilter, getFilteredMovies };
+export default { getItems, getFilter, getFilteredMovies, getItem };

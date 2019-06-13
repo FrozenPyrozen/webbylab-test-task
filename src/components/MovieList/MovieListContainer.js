@@ -20,7 +20,8 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = {
   fetchMovies: moviesOperations.fetchMovies,
-  deleteMovie: moviesOperations.deleteMovie
+  deleteMovie: moviesOperations.deleteMovie,
+  fetchDetails: moviesOperations.fetchMoreMovieDetails
 };
 
 export default connect(

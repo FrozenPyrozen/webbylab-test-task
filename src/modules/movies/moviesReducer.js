@@ -12,8 +12,15 @@ function moviesReducer(state = [], { type, payload }) {
     case types.DELETE_SUCCESS:
       return state.filter(item => item.id !== payload);
 
+    default:
+      return state;
+  }
+}
+
+function itemReducer(state = "", { type, payload }) {
+  switch (type) {
     case types.FETCH_MOVIE_SUCCESS:
-      return state.find(item => item.id === payload);
+      return payload;
 
     default:
       return state;
@@ -61,5 +68,6 @@ export default combineReducers({
   items: moviesReducer,
   loading: loadingReducer,
   error: errorReducer,
-  filter: filterReducer
+  filter: filterReducer,
+  currentMovie: itemReducer
 });

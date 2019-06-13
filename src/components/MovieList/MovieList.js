@@ -1,7 +1,7 @@
 import React from "react";
 import Movie from "../Movie";
 
-const MovieList = ({ movies = [], deleteMovie }) => (
+const MovieList = ({ movies = [], deleteMovie, fetchDetails }) => (
   <div
     style={{
       display: "flex",
@@ -14,7 +14,12 @@ const MovieList = ({ movies = [], deleteMovie }) => (
     }}
   >
     {movies.map(movie => (
-      <Movie key={movie.id} {...movie} onDelete={() => deleteMovie(movie.id)} />
+      <Movie
+        key={movie.id}
+        {...movie}
+        onDelete={() => deleteMovie(movie.id)}
+        fetchDetails={() => fetchDetails(movie.id)}
+      />
     ))}
   </div>
 );
