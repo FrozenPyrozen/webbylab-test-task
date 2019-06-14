@@ -2,22 +2,22 @@
 
 1. Clone this repository:
 ```
-git clone https://github.com/FrozenPyrozen/webbylab-test-task.git
+$ git clone https://github.com/FrozenPyrozen/webbylab-test-task.git
 ```
 2. Install dependencies using npm/yarn:
 ```
-npm install
+$ npm install
 ```
 ```
-yarn install
+$ yarn install
 ```
 3. Run the backend server in one terminal:
 ```
-npm run server
+$ npm run server
 ```
 4. Run the backend server in another terminal:
 ```
-npm start
+$ npm start
 ```
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
