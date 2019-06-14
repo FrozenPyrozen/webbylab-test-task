@@ -8,11 +8,67 @@
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 .container {
   max-width: 600px;
-  min-height: 300px;
+  min-height: 200px;
   background-color: #fff;
+
   padding: 16px;
+}
+
+.form {
+  max-width: 500px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttons_container {
+  display: flex;
+  width: 200px;
+  min-height: 10px;
+  margin: auto;
+  margin-top: 15px;
+  justify-content: space-between;
+}
+
+.btn_close {
+  background-color: orangered;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.btn_add_actor {
+  margin-top: 15px;
+  background-color: palevioletred;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.btn_submit {
+  background-color: rgb(60, 209, 60);
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 10px;
+  font-size: 16px;
 }

@@ -1,5 +1,6 @@
 import types from "./movieActionTypes";
 
+// Action for changing filter value
 const changeFilter = filter => ({
   type: types.CHANGE_FILTER,
   payload: filter

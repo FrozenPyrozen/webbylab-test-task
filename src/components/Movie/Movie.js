@@ -1,6 +1,11 @@
 import React from "react";
 
 import ShowMoreModal from "../ShowMoreModal";
+import styles from "./Movie.module.css";
+
+/**
+ * Movie card
+ */
 
 const Movie = ({
   title,
@@ -10,38 +15,23 @@ const Movie = ({
   onClose,
   fetchDetails
 }) => (
-  <div
-    style={{
-      minWidth: 320,
-      boxShadow:
-        "0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12)",
-      marginBottom: 32,
-      marginRight: 8,
-      marginLeft: 8,
-      padding: 8,
-      flex: "0 0 calc(33.3333% - 16px)",
-      backgroundColor: "#fff"
-    }}
-  >
-    <p>{title}</p>
+  <div className={styles.movie}>
     {isOpened && <ShowMoreModal onClose={onClose} details={fetchDetails} />}
 
+    <h3>{title}</h3>
     <hr />
-    <footer
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center"
-      }}
-    >
-      <button onClick={onDelete}>Delete</button>
+    <footer className={styles.footer}>
+      <button onClick={onDelete} className={styles.btn_delete}>
+        Delete
+      </button>
       <button
         onClick={() => {
           fetchDetails();
           return onOpenModal();
         }}
+        className={styles.btn_details}
       >
-        Show more
+        More details
       </button>
     </footer>
   </div>

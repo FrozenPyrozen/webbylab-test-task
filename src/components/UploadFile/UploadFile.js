@@ -3,7 +3,7 @@ import React from "react";
 const UploadFile = ({ onUpload }) => (
   <>
     <label>
-      Upload file
+      Choose file to upload
       <input type="file" onChange={onUpload} />
     </label>
   </>

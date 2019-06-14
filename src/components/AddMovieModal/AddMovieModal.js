@@ -14,7 +14,7 @@ const AddMovieModal = ({
   return (
     <div className={styles.backdrop} ref={containerRef}>
       <div className={styles.container}>
-        <form onSubmit={onSubmit}>
+        <form onSubmit={onSubmit} className={styles.form}>
           <label>
             Title
             <input
@@ -52,16 +52,27 @@ const AddMovieModal = ({
               onChange={onChange}
             />
           </label>
-          <button type="button" onClick={() => onAddActor(star)}>
+          <button
+            type="button"
+            className={styles.btn_add_actor}
+            onClick={() => onAddActor(star)}
+          >
             Add actor
           </button>
+
+          <div className={styles.buttons_container}>
+            <button
+              className={styles.btn_close}
+              type="button"
+              onClick={onClose}
+            >
+              Close
+            </button>
+            <button className={styles.btn_submit} type="submit">
+              Submit
+            </button>
+          </div>
         </form>
-        <button type="submit" onClick={onSubmit}>
-          Submit
-        </button>
-        <button type="button" onClick={onClose}>
-          Close
-        </button>
       </div>
     </div>
   );

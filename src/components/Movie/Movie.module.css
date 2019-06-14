@@ -1,0 +1,47 @@
+.movie {
+  min-width: 320px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 2px 1px -1px;
+  margin-bottom: 32px;
+  margin-right: 8px;
+  margin-left: 8px;
+  padding: 8px;
+  flex: 0 0 calc(33.3333% - 16px);
+  background-color: rgb(255, 255, 255);
+}
+
+.head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn_delete {
+  background-color: orangered;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.btn_details {
+  background-color: rgb(60, 209, 60);
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 10px;
+  font-size: 16px;
+}

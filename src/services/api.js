@@ -3,6 +3,12 @@ import axios from "axios";
 axios.defaults.baseURL = "http://localhost:8080";
 const MOVIES_PATH = "/movies";
 
+/*
+ * Use axios for http requests
+ *
+ * More information: https://github.com/axios/axios
+ */
+
 export const getAllMovies = async () => {
   try {
     const res = await axios.get(`${MOVIES_PATH}`);

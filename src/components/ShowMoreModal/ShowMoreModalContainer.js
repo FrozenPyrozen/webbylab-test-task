@@ -4,6 +4,9 @@ import { connect } from "react-redux";
 
 import { moviesSelectors } from "../../modules/movies";
 
+/**
+ * Component for showing more details about movie.
+ */
 class ShowMoreModalContainer extends Component {
   containerRef = createRef();
 

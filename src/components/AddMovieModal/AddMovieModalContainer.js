@@ -35,6 +35,7 @@ class AddMovieModalContainer extends Component {
   }
 
   // Inner form handlers
+
   /*
    * One handler for all iputs
    * We will distinguish the inputs by the name attribute

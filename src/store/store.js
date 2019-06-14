@@ -6,6 +6,8 @@ import reducer from "../modules/rootReducerModule";
 
 /**
  * Added thunk middleware for asynchronous updates
+ *
+ * More information: https://github.com/zalmoxisus/redux-devtools-extension
  */
 const middlewares = applyMiddleware(thunk);
 

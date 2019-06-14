@@ -5,6 +5,10 @@ import SearchSelect from "./SearchSelect";
 
 import { moviesActions, moviesSelectors } from "../../modules/movies";
 
+/**
+ * Selector component for changing type of search(by Title/by actor name)
+ */
+
 class SearchSelectContainer extends Component {
   render() {
     return (

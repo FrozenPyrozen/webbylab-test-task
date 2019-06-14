@@ -1,4 +1,9 @@
 import React from "react";
+import styles from "./MovieFilter.module.css";
+
+/*
+ * Filter movies bt title or actor name
+ */
 
 const MovieFilter = ({ value = "", onChange = () => null }) => (
   <input
@@ -6,17 +11,7 @@ const MovieFilter = ({ value = "", onChange = () => null }) => (
     onChange={e => onChange(e.target.value)}
     type="text"
     placeholder="Search..."
-    style={{
-      marginLeft: 4,
-      marginRight: 4,
-      backgroundColor: "rgba(255, 255, 255, 0.15)",
-      width: 250,
-      font: "inherit",
-      border: "1px solid #212121",
-      cursor: "text",
-      padding: 8,
-      outline: "none"
-    }}
+    className={styles.filter}
   />
 );
 

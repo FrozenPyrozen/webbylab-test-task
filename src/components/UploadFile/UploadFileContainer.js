@@ -7,9 +7,12 @@ import { moviesOperations } from "../../modules/movies";
 
 import movieParser from "../../utils/utils";
 
+/*
+ * Component for upload and parcing file
+ */
+
 class UploadFileContainer extends Component {
   handleFile = async event => {
-    // Choose file
     const file = event.target.files[0];
 
     // Parse movies from file

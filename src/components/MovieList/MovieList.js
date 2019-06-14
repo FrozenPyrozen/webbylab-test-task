@@ -1,19 +1,15 @@
 import React from "react";
 import Movie from "../Movie";
 
+import styles from "./MovieList.module.css";
+
 const MovieList = ({ movies = [], deleteMovie, fetchDetails, sortByName }) => (
-  <div
-    style={{
-      display: "flex",
-      flexWrap: "wrap",
-      maxWidth: 1440,
-      marginRight: "auto",
-      marginLeft: "auto",
-      padding: "0 16px",
-      marginTop: 32
-    }}
-  >
-    <button onClick={sortByName}>Sort By Name </button>
+  <div className={styles.movie_list}>
+    <div className={styles.fixed}>
+      <button onClick={sortByName} className={styles.btn_sort}>
+        Sort By Name{" "}
+      </button>
+    </div>
     {movies.map(movie => (
       <Movie
         key={movie._id}
