@@ -40,8 +40,6 @@ const deleteMovie = id => async dispatch => {
 };
 
 const fetchMoreMovieDetails = id => async dispatch => {
-  dispatch(actions.fetchRequest());
-
   try {
     const res = await api.getMovieById(id);
 

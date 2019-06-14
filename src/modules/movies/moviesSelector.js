@@ -2,6 +2,8 @@ const getItems = state => state.movies.items;
 
 const getFilter = state => state.movies.filter;
 
+const getLoading = state => state.movies.loading;
+
 const getTypeOfSearch = state => state.movies.currentSearchType;
 const getItem = state => state.movies.currentMovie;
 
@@ -24,5 +26,6 @@ export default {
   getFilter,
   getFilteredMovies,
   getItem,
-  getTypeOfSearch
+  getTypeOfSearch,
+  getLoading
 };

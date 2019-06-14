@@ -16,6 +16,7 @@ export const getAllMovies = async () => {
     return res.data;
   } catch (error) {
     console.log(error);
+    alert(error);
   }
 };
 
@@ -26,6 +27,7 @@ export const getMovieById = async id => {
     return res.data;
   } catch (error) {
     console.log(error);
+    alert(error);
   }
 };
 
@@ -36,6 +38,7 @@ export const deleteMovie = async id => {
     return res.status === 200;
   } catch (error) {
     console.log(error);
+    alert(error);
   }
 };
 
@@ -45,5 +48,6 @@ export const addMovie = async movie => {
     return res.data;
   } catch (error) {
     console.log(error);
+    alert(error);
   }
 };

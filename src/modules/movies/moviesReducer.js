@@ -7,7 +7,7 @@ function moviesReducer(state = [], { type, payload }) {
       return payload;
 
     case types.ADD_SUCCESS:
-      return [...state, payload];
+      return [payload, ...state];
 
     case types.ADD_MOVIES_SUCCESS:
       return [...state, ...payload];
@@ -65,7 +65,11 @@ function loadingReducer(state = false, { type, payload }) {
       return true;
 
     case types.FETCH_SUCCESS:
+    case types.ADD_SUCCESS:
+    case types.DELETE_SUCCESS:
+    case types.ADD_MOVIES_SUCCESS:
     case types.FETCH_ERROR:
+    case types.FETCH_MOVIE_SUCCESS:
       return false;
 
     default:
