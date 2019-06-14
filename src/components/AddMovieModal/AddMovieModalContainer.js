@@ -1,9 +1,7 @@
 import React, { Component, createRef } from "react";
+import { connect } from "react-redux";
 
 import AddMovieModal from "./AddMovieModal";
-import * as api from "../../services/api";
-
-import { connect } from "react-redux";
 
 import { moviesOperations } from "../../modules/movies";
 
@@ -64,7 +62,15 @@ class AddMovieModalContainer extends Component {
     if (!title || !releaseYear || !type || !stars) {
       return alert("Please, fill out all forms!");
     }
-    this.props.addMovie({ title, releaseYear, type, stars });
+
+    const movie = {
+      title: title.trim(),
+      releaseYear: Number(releaseYear.trim()),
+      type: type.trim(),
+      stars
+    };
+
+    this.props.addMovie(movie);
     this.reset();
     onClose();
   };

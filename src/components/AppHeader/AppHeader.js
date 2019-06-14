@@ -2,6 +2,7 @@ import React from "react";
 import MovieFilter from "../MovieFilter";
 import SearchSelect from "../SearchSelect";
 import AddMovieModal from "../AddMovieModal";
+import UploadFile from "../UploadFile/";
 
 const AppHeader = ({ onClose, onOpenModal, isOpened }) => (
   <header
@@ -20,6 +21,7 @@ const AppHeader = ({ onClose, onOpenModal, isOpened }) => (
     <button onClick={onOpenModal}>Add movie</button>
     <SearchSelect />
     <MovieFilter />
+    <UploadFile />
   </header>
 );
 
