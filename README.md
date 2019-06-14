@@ -1,5 +1,5 @@
 ## About app
-This is my first test-task app so I doubt a little about the correctness of my architecture. So Redux action types, reducers, actions etc. in **src/modules/movies**, store for Redux in **src/store**. All components accordingly lie in **src/components** folder. I tried to separate the component logic from its view. I have succeeded or not you decide)
+This is my first test-task app so I doubt a little about the correctness of my architecture. So Redux action types, reducers, actions etc. in **src/modules/movies**, store for Redux in **src/store**. All components accordingly lie in **src/components** folder. I tried to separate the component logic from its view. And I decided not to use ready-made components like material-ui and practice writing my own. so I succeeded or not, it's up to you)
 
 P.S.This app fetches data to https://cloud.mongodb.com. There is a connection string in **server/config/db**.
 
