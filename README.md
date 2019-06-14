@@ -20,6 +20,15 @@ $ npm run server
 $ npm start
 ```
 
+##Default ports
+
+Application will be run on http://localhost:3000/
+
+Server will be run on http://localhost:8080/
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
