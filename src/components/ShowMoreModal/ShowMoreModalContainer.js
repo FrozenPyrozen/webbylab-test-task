@@ -45,19 +45,14 @@ class ShowMoreModalContainer extends Component {
 
   render() {
     const { onClose, currentMovie } = this.props;
-    const {
-      title,
-      "Release Year": releaseYear,
-      Format: format,
-      Stars: stars
-    } = currentMovie;
+    const { title, releaseYear, type, stars } = currentMovie;
 
     return (
       <ShowMoreModal
         containerRef={this.containerRef}
         {...this.state}
         onClose={onClose}
-        details={{ title, releaseYear, format, stars }}
+        details={{ title, releaseYear, type, stars }}
       />
     );
   }

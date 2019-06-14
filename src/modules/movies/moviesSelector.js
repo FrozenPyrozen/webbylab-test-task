@@ -11,7 +11,9 @@ const getFilteredMovies = state => {
   const searchType = getTypeOfSearch(state);
 
   if (searchType === "actorName") {
-    return items.filter(item => item.Stars.toLowerCase().includes(filter));
+    return items.filter(item =>
+      item.stars.some(item => item.toLowerCase().includes(filter))
+    );
   }
 
   return items.filter(item => item.title.toLowerCase().includes(filter));

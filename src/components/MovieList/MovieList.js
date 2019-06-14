@@ -16,10 +16,10 @@ const MovieList = ({ movies = [], deleteMovie, fetchDetails, sortByName }) => (
     <button onClick={sortByName}>Sort By Name </button>
     {movies.map(movie => (
       <Movie
-        key={movie.id}
+        key={movie._id}
         {...movie}
-        onDelete={() => deleteMovie(movie.id)}
-        fetchDetails={() => fetchDetails(movie.id)}
+        onDelete={() => deleteMovie(movie._id)}
+        fetchDetails={() => fetchDetails(movie._id)}
       />
     ))}
   </div>

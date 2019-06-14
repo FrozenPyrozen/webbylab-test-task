@@ -15,10 +15,7 @@ class UploadFileContainer extends Component {
     // Parse movies from file
     const movies = await movieParser(file);
 
-    console.log(movies);
-
-    //
-    // this.props.addMovies(movies);
+    this.props.addMovies(movies);
   };
   render() {
     return <UploadFile onUpload={this.handleFile} />;

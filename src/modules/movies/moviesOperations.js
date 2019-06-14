@@ -19,6 +19,9 @@ const addMovie = movie => async dispatch => {
   try {
     const response = await api.addMovie(movie);
 
+    if (Array.isArray(response)) {
+      return dispatch(actions.addMoviesSuccess(response));
+    }
     dispatch(actions.addMovieSuccess(response));
   } catch (error) {
     dispatch(actions.fetchError(error));

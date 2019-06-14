@@ -9,8 +9,11 @@ function moviesReducer(state = [], { type, payload }) {
     case types.ADD_SUCCESS:
       return [...state, payload];
 
+    case types.ADD_MOVIES_SUCCESS:
+      return [...state, ...payload];
+
     case types.DELETE_SUCCESS:
-      return state.filter(item => item.id !== payload);
+      return state.filter(item => item._id !== payload);
 
     case types.SORT_FILMS_BY_NAME:
       return state.slice().sort((prev, next) => {

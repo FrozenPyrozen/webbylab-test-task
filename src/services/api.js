@@ -1,28 +1,43 @@
 import axios from "axios";
 
-axios.defaults.baseURL = "http://localhost:3001";
+axios.defaults.baseURL = "http://localhost:8080";
 const MOVIES_PATH = "/movies";
 
 export const getAllMovies = async () => {
-  const res = await axios.get(`${MOVIES_PATH}`);
+  try {
+    const res = await axios.get(`${MOVIES_PATH}`);
 
-  return res.data;
+    return res.data;
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 export const getMovieById = async id => {
-  const res = await axios.get(`${MOVIES_PATH}/${id}`);
+  try {
+    const res = await axios.get(`${MOVIES_PATH}/${id}`);
 
-  return res.data;
+    return res.data;
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 export const deleteMovie = async id => {
-  const res = await axios.delete(`${MOVIES_PATH}/${id}`);
+  try {
+    const res = await axios.delete(`${MOVIES_PATH}/${id}`);
 
-  return res.status === 200;
+    return res.status === 200;
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 export const addMovie = async movie => {
-  const res = await axios.post(`${MOVIES_PATH}`, movie);
-
-  return res.data;
+  try {
+    const res = await axios.post(`${MOVIES_PATH}`, movie);
+    return res.data;
+  } catch (error) {
+    console.log(error);
+  }
 };

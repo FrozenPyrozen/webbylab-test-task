@@ -34,6 +34,11 @@ const fetchError = error => ({
   payload: error
 });
 
+const addMoviesSuccess = movies => ({
+  type: types.ADD_MOVIES_SUCCESS,
+  payload: movies
+});
+
 const fetchMoreMovieSuccess = item => ({
   type: types.FETCH_MOVIE_SUCCESS,
   payload: item
@@ -44,6 +49,7 @@ const sortFilmsByName = () => ({
 });
 
 export default {
+  addMoviesSuccess,
   changeSearchType,
   sortFilmsByName,
   fetchMoreMovieSuccess,
