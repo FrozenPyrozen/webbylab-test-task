@@ -20,7 +20,8 @@ class MovieListContainer extends Component {
 
 const mapStateToProps = state => ({
   movies: moviesSelectors.getFilteredMovies(state),
-  isLoading: moviesSelectors.getLoading(state)
+  isLoading: moviesSelectors.getLoading(state),
+  isSorted: moviesSelectors.getSorted(state)
 });
 
 const mapDispatchToProps = {

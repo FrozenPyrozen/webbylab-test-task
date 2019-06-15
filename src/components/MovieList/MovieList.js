@@ -9,12 +9,13 @@ const MovieList = ({
   deleteMovie,
   fetchDetails,
   sortByName,
-  isLoading
+  isLoading,
+  isSorted
 }) => (
   <div className={styles.movie_list}>
     <div className={styles.fixed}>
-      <button onClick={sortByName} className={styles.btn_sort}>
-        Sort By Name{" "}
+      <button onClick={() => sortByName(!isSorted)} className={styles.btn_sort}>
+        {isSorted ? "Reset sort" : "Sort by name"}
       </button>
     </div>
     {isLoading ? (

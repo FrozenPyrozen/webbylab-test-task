@@ -15,15 +15,6 @@ function moviesReducer(state = [], { type, payload }) {
     case types.DELETE_SUCCESS:
       return state.filter(item => item._id !== payload);
 
-    case types.SORT_FILMS_BY_NAME:
-      return state.slice().sort((prev, next) => {
-        const prevTitle = prev.title.toLowerCase();
-        const nextTitle = next.title.toLowerCase();
-        if (prevTitle < nextTitle) return -1;
-        if (prevTitle > nextTitle) return 1;
-        return 0;
-      });
-
     default:
       return state;
   }
@@ -52,6 +43,16 @@ function filterReducer(state = "", { type, payload }) {
 function searchTypeReducer(state = "title", { type, payload }) {
   switch (type) {
     case types.CHANGE_SEARCH_TYPE:
+      return payload;
+
+    default:
+      return state;
+  }
+}
+
+function sortReducer(state = false, { type, payload }) {
+  switch (type) {
+    case types.SORT_FILMS_BY_NAME:
       return payload;
 
     default:
@@ -95,6 +96,7 @@ export default combineReducers({
   loading: loadingReducer,
   error: errorReducer,
   filter: filterReducer,
+  sorting: sortReducer,
   currentMovie: itemReducer,
   currentSearchType: searchTypeReducer
 });
