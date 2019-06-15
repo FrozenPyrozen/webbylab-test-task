@@ -8,16 +8,19 @@ const AddMovieModal = ({
   fields,
   onSubmit,
   onChange,
-  onAddActor
+  onAddActor,
+  onDeleteActor
 }) => {
   const { title, releaseYear, type, star, stars } = fields;
   return (
     <div className={styles.backdrop} ref={containerRef}>
       <div className={styles.container}>
+        <span className={styles.btn_close} onClick={onClose} />
         <form onSubmit={onSubmit} className={styles.form}>
-          <label>
+          <label className={styles.label}>
             Title
             <input
+              className={styles.input}
               type="text"
               placeholder="Enter title"
               name="title"
@@ -25,9 +28,10 @@ const AddMovieModal = ({
               onChange={onChange}
             />
           </label>
-          <label>
+          <label className={styles.label}>
             Year
             <input
+              className={styles.input}
               type="number"
               placeholder="Enter release year"
               name="releaseYear"
@@ -37,41 +41,38 @@ const AddMovieModal = ({
           </label>
           <FormatSelect onChange={onChange} currentFilter={type} />
 
-          <label>
+          <label className={styles.label}>
             Actors
             <ul>
               {stars.map(item => (
-                <li key={item}>{item}</li>
+                <li key={item}>
+                  {item}
+                  <span
+                    className={styles.btn_delete_actor}
+                    onClick={() => onDeleteActor(item)}
+                  />
+                </li>
               ))}
             </ul>
+          </label>
+          <div className={styles.addActorContainer}>
             <input
+              className={styles.input}
               type="text"
               placeholder="Enter actor full name"
               name="star"
               value={star}
               onChange={onChange}
             />
-          </label>
-          <button
-            type="button"
-            className={styles.btn_add_actor}
-            onClick={() => onAddActor(star)}
-          >
-            Add actor
-          </button>
-
-          <div className={styles.buttons_container}>
-            <button
-              className={styles.btn_close}
-              type="button"
-              onClick={onClose}
-            >
-              Close
-            </button>
-            <button className={styles.btn_submit} type="submit">
-              Submit
-            </button>
+            <span
+              className={styles.btn_add_actor}
+              onClick={() => onAddActor(star)}
+            />
           </div>
+
+          <button className={styles.btn_submit} type="submit">
+            Submit
+          </button>
         </form>
       </div>
     </div>

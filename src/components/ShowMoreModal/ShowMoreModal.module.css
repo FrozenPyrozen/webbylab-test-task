@@ -11,25 +11,33 @@
 }
 
 .container {
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   max-width: 600px;
-  min-height: 300px;
+  min-height: 100px;
   background-color: #fff;
   padding: 16px;
 }
 
 .btn_delete {
-  background-color: orangered;
-  border: none;
-  color: white;
-  padding: 10px 15px;
-  text-align: center;
-  text-decoration: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  margin-top: -30px;
+  margin-right: -30px;
+  cursor: pointer;
+  color: #fff;
+  border: 1px solid #aeaeae;
+  border-radius: 30px;
+  background: #605f61;
+  font-size: 31px;
+  font-weight: bold;
   display: inline-block;
-  border-radius: 10px;
-  font-size: 16px;
-  margin: auto;
-  align-self: center;
+  line-height: 0px;
+  padding: 11px 3px;
+}
+
+.btn_delete:before {
+  content: "×";
 }

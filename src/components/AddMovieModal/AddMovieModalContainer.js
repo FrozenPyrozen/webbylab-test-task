@@ -47,10 +47,21 @@ class AddMovieModalContainer extends Component {
   };
 
   handleAddActor = value => {
+    if (!value) {
+      return alert("Enter actor full name!");
+    }
     this.setState(prevState => {
       return {
         stars: [...prevState.stars, value.trim()],
         star: ""
+      };
+    });
+  };
+
+  handleDeleteActor = value => {
+    this.setState(prevState => {
+      return {
+        stars: prevState.stars.filter(star => star !== value.trim())
       };
     });
   };
@@ -113,6 +124,7 @@ class AddMovieModalContainer extends Component {
         onSubmit={this.handleSubmit}
         onChange={this.handleChange}
         onAddActor={this.handleAddActor}
+        onDeleteActor={this.handleDeleteActor}
       />
     );
   }

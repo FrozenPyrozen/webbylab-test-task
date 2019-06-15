@@ -10,9 +10,7 @@ const ShowMoreModal = ({ onClose, containerRef, details }) => {
         <h3>{releaseYear}</h3>
         <span>{type}</span>
         <p>{stars}</p>
-        <button className={styles.btn_delete} type="button" onClick={onClose}>
-          Close
-        </button>
+        <span className={styles.btn_delete} onClick={onClose} />
       </div>
     </div>
   );
