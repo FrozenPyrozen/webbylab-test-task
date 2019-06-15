@@ -12,16 +12,14 @@ const MovieList = ({
   isLoading,
   isSorted
 }) => (
-  <div className={styles.movie_list}>
-    <div className={styles.fixed}>
-      <button onClick={() => sortByName(!isSorted)} className={styles.btn_sort}>
-        {isSorted ? "Reset sort" : "Sort by name"}
-      </button>
-    </div>
+  <div className={styles.moviesContainer}>
+    <button onClick={() => sortByName(!isSorted)} className={styles.btn_sort}>
+      {isSorted ? "Reset sort" : "Sort by name"}
+    </button>
     {isLoading ? (
       <Loader />
     ) : (
-      <div>
+      <div className={styles.movie_list}>
         {movies.map(movie => (
           <Movie
             key={movie._id}

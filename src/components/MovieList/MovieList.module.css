@@ -1,6 +1,7 @@
 .movie_list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
   grid-gap: 6px;
   padding: 8px;
   margin-bottom: 32px;
@@ -9,13 +10,14 @@
     0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
 }
 
-.fixed {
-  position: absolute;
-  top: 85px;
-  right: 10px;
+.moviesContainer {
+  position: relative;
 }
 
 .btn_sort {
+  position: absolute;
+  top: -50px;
+  right: 10px;
   margin-top: 15px;
   background-color: rgb(42, 28, 163);
   border: none;
