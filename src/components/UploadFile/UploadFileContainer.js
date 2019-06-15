@@ -15,6 +15,13 @@ class UploadFileContainer extends Component {
   handleFile = async event => {
     const file = event.target.files[0];
 
+    const fileType = file.type;
+    console.log(file);
+
+    if (fileType !== "text/plain") {
+      return alert("Wrong file type. Please upload txt file!");
+    }
+
     // Parse movies from file
     const movies = await movieParser(file);
 
