@@ -9,18 +9,22 @@ P.S.This app fetches data to https://cloud.mongodb.com. There is a connection st
 ```
 $ git clone https://github.com/FrozenPyrozen/webbylab-test-task.git
 ```
-2. Install dependencies using npm/yarn:
+2. Change the current directory to **webbylab-test-task**:
+```
+$ cd ./webbylab-test-task
+```
+3. Install dependencies using npm/yarn:
 ```
 $ npm install
 ```
 ```
 $ yarn install
 ```
-3. Run the backend server in one terminal:
+4. Run the backend server in one terminal:
 ```
 $ npm run server
 ```
-4. Run the backend server in another terminal:
+5. Run the backend server in another terminal:
 ```
 $ npm start
 ```
