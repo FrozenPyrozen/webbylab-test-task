@@ -24,7 +24,7 @@ $ yarn install
 ```
 $ npm run server
 ```
-5. Run the backend server in another terminal:
+5. Run app in another terminal:
 ```
 $ npm start
 ```
