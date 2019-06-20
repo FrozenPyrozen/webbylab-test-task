@@ -66,6 +66,7 @@ const AddMovieModal = ({
               name="star"
               value={star}
               onChange={onChange}
+              required
             />
             <span
               className={styles.btn_add_actor}
