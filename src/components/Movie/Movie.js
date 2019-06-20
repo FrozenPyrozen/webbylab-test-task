@@ -24,10 +24,10 @@ const Movie = ({
       <button
         onClick={e => {
           e.preventDefault();
-          const confirmed = window.confirm(
+          const isConfirmed = window.confirm(
             "Are you sure you wish to delete this item?"
           );
-          if (!confirmed) {
+          if (!isConfirmed) {
             return;
           }
           onDelete();
