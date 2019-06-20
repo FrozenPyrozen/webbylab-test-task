@@ -38,6 +38,8 @@ const AddMovieModal = ({
               name="releaseYear"
               value={releaseYear}
               onChange={onChange}
+              min="1850"
+              max="2020"
             />
           </label>
           <FormatSelect onChange={onChange} currentFilter={type} />
