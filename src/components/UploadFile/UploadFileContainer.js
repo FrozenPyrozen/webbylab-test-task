@@ -13,10 +13,17 @@ import movieParser from "../../utils/utils";
 
 class UploadFileContainer extends Component {
   handleFile = async event => {
+    const fileList = event.target.files;
+
+    if (fileList.length === 0) {
+      return alert(
+        "Error uploading a file! Please try again and upload txt file!"
+      );
+    }
+
     const file = event.target.files[0];
 
     const fileType = file.type;
-    console.log(file);
 
     if (fileType !== "text/plain") {
       return alert("Wrong file type. Please upload txt file!");
