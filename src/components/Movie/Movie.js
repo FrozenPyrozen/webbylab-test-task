@@ -21,7 +21,19 @@ const Movie = ({
     <h3>{title}</h3>
     <hr />
     <footer className={styles.footer}>
-      <button onClick={onDelete} className={styles.btn_delete}>
+      <button
+        onClick={e => {
+          e.preventDefault();
+          const confirmed = window.confirm(
+            "Are you sure you wish to delete this item?"
+          );
+          if (!confirmed) {
+            return;
+          }
+          onDelete();
+        }}
+        className={styles.btn_delete}
+      >
         Delete
       </button>
       <button
