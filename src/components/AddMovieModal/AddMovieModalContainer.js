@@ -75,6 +75,12 @@ class AddMovieModalContainer extends Component {
       return alert("Please, fill out all forms!");
     }
 
+    if (stars.length === 0) {
+      return alert(
+        "Please, fill at least one actor! To add actor click on '+' button!"
+      );
+    }
+
     const movie = {
       title: title.trim(),
       releaseYear: Number(releaseYear.trim()),
