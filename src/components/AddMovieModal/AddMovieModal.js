@@ -1,7 +1,8 @@
 import React from "react";
 import styles from "./AddMovieModal.module.css";
 
-import FormatSelect from "../FormatSelect/";
+import FormatSelect from "../FormatSelect";
+
 const AddMovieModal = ({
   onClose,
   containerRef,
